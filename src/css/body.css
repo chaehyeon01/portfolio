@@ -1,0 +1,417 @@
+.portfolio_outerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    justify-content: space-between;
+}
+.aboutMe_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    
+}
+.abRight_box {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    background-color:#EBE4D9;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+.ab_profileBox {
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.ab_imgBox {
+    width:160px;
+    height:160px;
+    overflow: hidden;
+    border-radius:100%;
+    position: relative;
+}
+.ab_imgBox img {
+    max-width:160px;
+    height:auto;
+    position:absolute;
+    left:0px;
+    top:-10px;
+}
+
+.ab_profileText{
+    size: 0.5em;
+    text-align:center;
+    margin-top:15px;
+    letter-spacing:1px;
+}
+.ab_contents {
+    width:50%;
+    color:#333;
+}
+.ab_contents h1 {
+    font-size:1.5em;
+    margin-bottom:15px;
+    text-align: center;
+}
+.my_skill {
+    width:40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.skill_title {
+    margin-bottom:20px;
+    width:25%;
+    border-bottom:1.2px solid #333;
+    line-height:50px;
+    color:#333;
+}
+.my_skill h3 {
+    color:#333;
+}
+.web_skill {
+    width:100%;
+    height:80px;
+
+}
+.web_skill li {
+    display: inline-block;
+}
+
+.web_skill .web_html5{
+    background-image:url(../img/web.png);
+    background-size:150px;
+    width:43px;
+    height:100%;
+    background-position:0px;
+    background-repeat:no-repeat;
+   
+}
+.web_skill .web_js {
+    width:43px;
+    height:100%;
+    background-image:url(../img/web.png);
+    background-size:150px;
+    background-position:-50px;
+    background-repeat:no-repeat;
+}
+.web_skill .web_css3 {
+    width:43px;
+    height:100%;
+    background-image:url(../img/web.png);
+    background-size:150px;
+    background-position:-100px;
+    background-repeat:no-repeat;
+}
+.web_skill .web_jqeury {
+    width:50px;
+    height:100%;
+    background-image:url(../img/jquery.png);
+    background-size:50px;
+    background-position-y:60%;
+    background-repeat:no-repeat;
+}
+.lang {
+    margin-top:10px;
+    width:100%;
+    height:70px;
+}
+.lang li {
+    display: inline-block;
+}
+.lang .lang_c {
+    width:50px;
+    height:100%;
+    background-image:url(../img/c.png);
+    background-size:50px;
+    background-repeat:no-repeat;
+}
+.lang .lang_java {
+    width:50px;
+    height:100%;
+    background-image:url(../img/javaIcon.png);
+    background-size:50px;
+    background-repeat:no-repeat;
+}
+.lang .lang_js {
+    width:55px;
+    height:100%;
+    background-image:url(../img/web.png);
+    background-size:150px;
+    background-position:-50px;
+    background-position-y:0px;
+    background-repeat:no-repeat;
+}
+.lang .lang_php {
+    width:55px;
+    height:100%;
+    background-image:url(../img/php.png);
+    background-size:55px;
+    background-position-y:50%;
+    background-repeat:no-repeat;
+}
+.dbms {
+    width:100%;
+    height:50px;
+}
+.dbms li {
+    display: inline-block;
+}
+.dbms .db_mysql {
+    width:60px;
+    height:100%;
+    background-image:url(../img/mysql.png);
+    background-size:60px;
+    background-position-y:50%;
+    background-repeat:no-repeat;
+}
+.left_box {
+    padding:100px 100px;
+    box-sizing: border-box;
+    background-color:#ffffff;
+    align-items:center;
+}
+.left_box h1 {
+    
+    line-height:30px;
+    font-size:1.5em;
+    border-bottom:1.5px solid #333;
+    
+}
+.right_box {
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    padding:80px 80px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-content:center;
+    flex-wrap: wrap;
+    background-color: #CED3D7;
+    
+}
+.portFolio_box {
+    width:48%;
+    margin-bottom:60px;
+    background-color:#fff;
+    box-shadow: 5px 5px 4px 0.5px rgba(206, 211, 215, 0.233);
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:10px;
+
+}
+
+.portFlio_img {
+    width:100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-top:30px;
+    padding-bottom:20px;
+    cursor: pointer;
+
+    
+  
+}
+.portFlio_img:hover .hover_box{
+
+    opacity:0.45;
+    transition: 0.6s;
+    transition: 0.6s;    
+   
+}
+.portFlio_img:hover i {
+    opacity:1;
+    transition: 0.6s;  
+}
+.portFlio_img i {
+   position: absolute;
+   left:50%;
+   top:50%;
+   font-size:50px;
+   margin-left:-25px;
+   margin-top:-25px;
+   color:#fff;
+    opacity:0;
+}
+.hover_box {
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    background-color:#333;
+    opacity:0;
+    border-radius:10px;
+}
+
+.portFlio_img .web_img {
+   max-width:280px;
+    
+}
+.portFlio_img .android  {
+    max-width:100px;
+}
+.portFlio_img .Nam2Chatch {
+    max-width:250px;
+}
+
+
+.portFlio_contents {
+    width:100%;
+    box-sizing: border-box;
+    padding:0px 30px;
+    font-size:0.9em;
+  
+    
+}
+.col_innerContents {
+  font-size:0.9;
+  box-sizing: border-box;
+}
+
+.title {
+    line-height:50px;
+    font-weight:500;
+    font-size:1.2em;
+}
+.col_title {    
+    padding-right:10px;
+    margin-right:10px;
+    border-right: 1px solid #333;
+}
+.col_contents {
+    text-align: left;
+    margin-bottom:10px;
+    letter-spacing:0.5px;
+   
+}
+
+.col_li {
+    font-weight:500;
+    padding-right:10px;
+    margin-right:10px;
+    border-right: 1px solid #333;
+    font-size:1em;
+    line-height:30px;
+
+}
+.link_box {
+    padding-bottom:30px;
+} 
+.link_box ul {
+    margin-top:10px;
+}
+.link_box ul li {
+    margin-bottom:5px;
+}
+.link_box ul i {
+    margin-right:5px;
+    color:#333;
+}
+.link_box ul li {
+    font-size:1em;
+  
+}
+.link_box ul li a {
+    color:#333;
+}
+@media screen and (max-width:768px ) {
+
+    .portfolio_outerbox {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left_box {
+        padding:100px 50px;
+    }
+    .right_box {
+        padding:50px 30px;
+    }
+    .portFlio_img .web_img {
+        max-width:250px;
+
+    }
+    .portFlio_img .android{
+        max-width:80px;
+    }
+    .portFlio_img .Nam2Chatch {
+        max-width:140px;
+    }
+    .img_wrap{
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+    }
+    .portFolio_box  {
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .portFlio_contents {
+        padding:15px 20px;
+        flex-direction: column;
+        align-items: center;
+        font-size:0.8em;
+
+    }
+    .title {
+        line-height:23px;
+        text-align:center ;
+        margin-bottom:15px;
+    }
+    .text_tilte {
+        font-size:0.8em;
+    }
+    .abRight_box {
+        flex-direction: column;
+        align-items: center;
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .ab_profileBox {
+        width:90%;
+        font-size:0.9em;
+    }
+    .ab_imgBox {
+        width:150px;
+        height:150px;
+    }
+    .ab_imgBox img {
+        max-width:150px;
+    }
+    .ab_contents {
+        width:90%;
+    }
+    .ab_contents h1 {
+        font-size:1em;
+        margin-top:15px;
+        margin-bottom:15px;
+        text-align: center;
+    }
+    .ab_contents p {
+        font-size:0.9em;
+    }
+    .my_skill {
+        width:90%;
+        margin-top:20px;
+    }
+    .skill_title {
+        width:35%;
+    }
+  
+}
