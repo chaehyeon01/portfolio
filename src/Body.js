@@ -6,28 +6,16 @@ import ilhsaeImg3 from "./img/ilhase3.jpg";
 import ilhsaeImg4 from "./img/ilhase4.jpg";
 import ilhsaeImg5 from "./img/ilhase5.jpg";
 import ilhsaeImg6 from "./img/ilhase6.jpg";
-
-import android from "./img/android.png";
-import android2 from "./img/android2.png";
-import android3 from "./img/android3.png";
-import android5 from "./img/android5.png";
-import android6 from "./img/android6.png";
-import android7 from "./img/android7.png";
-import android11 from "./img/android11.png";
-import android12 from "./img/android12.png";
-import android13 from "./img/android13.png";
-import android8 from "./img/android8.png";
-import android9 from "./img/android9.png";
-import android10 from "./img/android10.png";
-import android4 from "./img/android4.png";
-
-import java from "./img/java.png";
-import java2 from "./img/java2.png";
-import java01 from "./img/java01.jpg";
-import java02 from "./img/java02.jpg";
-import java03 from "./img/java03.jpg";
-import java04 from "./img/java04.jpg";
-import java05 from "./img/java05.jpg";
+import ramada from "./img/ramada.png";
+import ramada1 from "./img/ramada.jpg";
+import cj from "./img/cj.png";
+import cj2 from "./img/cj2.png";
+import cj3 from "./img/cj3.png";
+// import ramada2 from "./img/ramada2.jpg";
+// import ramada3 from "./img/ramada3.jpg";
+// import ramada4 from "./img/ramada4.jpg";
+// import ramada5 from "./img/ramada5.jpg";
+// import ramada6 from "./img/ramada6.jpg";
 
 import movie from "./img/movie_main.png";
 import movie1 from "./img/movie.jpg";
@@ -51,32 +39,41 @@ const images = [
     ilhsaeImg4
 ];
 
-const androidImages = [
-    android,
-    android2,
-    android3,
-    android6,
-    android11,
-    android7,
-    android12,
-    android13,
-    android8,
-    android9,
-    android4,
-    android10,
-    android5
-
+const ramadaImages = [
+    ramada1,
 ];
 
-const javaImages = [
-    java01,
-    java02,
-    java2,
-    java03,
-    java04,
-    java05,
-    java
+const cjImages = [
+    cj,
+    cj2,
+    cj3
 ];
+// const androidImages = [
+//     android,
+//     android2,
+//     android3,
+//     android6,
+//     android11,
+//     android7,
+//     android12,
+//     android13,
+//     android8,
+//     android9,
+//     android4,
+//     android10,
+//     android5
+
+// ];
+
+// const javaImages = [
+//     java01,
+//     java02,
+//     java2,
+//     java03,
+//     java04,
+//     java05,
+//     java
+// ];
 
 class Body extends Component {
 
@@ -86,18 +83,18 @@ class Body extends Component {
         this.state = {
             movieIndex:0,
             photoIndex: 0,
-            photoAndroidIndex:0,
-            javaIndex:0,
+            ramadaIndex:0,
+            cjIndex:0,
             isOpen: false,
-            isAndroidOpen: false,
             isMovieOpen:false,
-            isJavaOpen:false,
+            isRamadaOpen:false,
+            isCjOpen:false
         };
     }
 
     render() {
 
-        const {photoIndex, isOpen, isAndroidOpen, photoAndroidIndex ,isMovieOpen,movieIndex,javaIndex,isJavaOpen} = this.state;
+        const {photoIndex, isOpen,isMovieOpen, isCjOpen, cjIndex ,ramadaIndex,isRamadaOpen,movieIndex} = this.state;
 
         return (
         <section>
@@ -107,6 +104,117 @@ class Body extends Component {
                 </div>
                 <div className="right_box">
                     <div className="portFolio_box">
+                        <div className="portFlio_img" onClick={() => this.setState({isRamadaOpen:true})}>
+                            <img className="web_img" src={ramada} alt="라마다웨딩홀" />
+                            <div className="hover_box"></div>
+                            <i className="fas fa-image"></i>
+                        </div>
+                        <div className="portFlio_contents">
+                            <p className="title">
+                                <span className="col_title">프로젝트1</span>
+                                '신도림 라마다웨딩홀 관리자프로그램'
+                            </p>
+                            <p className="col_contents">&nbsp;&nbsp;
+                                웨딩업체 직원들이 사용할 웹 기반의 관리자 프로그램 , 상담문의 부터 정산서 발급까지 일련의 과정을 손쉽게 관리하는 것이 목적
+                            </p>
+                            <div className="col_innerContents">
+                                    <ul>
+                                        <li>
+                                            <span className="col_li">개발인원</span>개발팀(2인) 
+                                        </li>
+                                        <li>
+                                            <span className="col_li">개발기간</span>2020/07 ~ 2020/10 , 2020/10 ~ 2021/02
+                                        </li>
+                                        <li>
+                                            <span className="col_li">사용 기술</span>
+                                            html / Javascript / php(7.x) / bootestrap(4.x) / mysqli 
+                                        </li>
+                                        <li>
+                                            <span className="col_li">담당업무</span>
+                                            <br />- 홈페이지 문의관리 페이지<br />
+- 일정관리 (내방상담스케줄, 시식스케줄, 컨트롤차트) 페이지<br /> 
+- 고객리스트 메인페이지, 고객리스트(최종체크리스트) , 취소 보관함 페이지<br />
+- 발주관리<br /> 
+- 직원관리<br /> 
+- 전체적인 페이지 프론트 엔드 및 백엔드 개발 수행
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div className="link_box"></div>
+                        </div>
+                        {
+                            isRamadaOpen && (
+                                <Lightbox
+                                    mainSrc={ramadaImages[ramadaIndex]}
+                                    nextSrc={ramadaImages[(ramadaIndex + 1) % ramadaImages.length]}
+                                    prevSrc={ramadaImages[(ramadaIndex + ramadaImages.length - 1) % ramadaImages.length]}
+                                    onCloseRequest={() => this.setState({isRamadaOpen: false})}
+                                    onMovePrevRequest={() => this.setState({
+                                        ramadaIndex: (ramadaIndex + ramadaImages.length - 1) % ramadaImages.length
+                                    })
+                                    }
+                                    onMoveNextRequest={() => this.setState({
+                                        ramadaIndex: (ramadaIndex + 1) % ramadaImages.length
+                                    })
+                                  }/>
+                              )
+                        }
+                    </div>
+                    <div className="portFolio_box">
+                        <div className="portFlio_img" onClick={() => this.setState({isCjOpen: true})}>
+                            <img className="web_img" src={cj} alt="CJ오쇼핑" />
+                            <div className="hover_box"></div>
+                            <i className="fas fa-image"></i>
+                        </div>
+                        <div className="portFlio_contents">
+                            <p className="title">
+                                <span className="col_title">프로젝트2</span>
+                                '카카오 챗봇(CJ 오쇼핑 알리미)'
+                            </p>
+                            <p className="col_contents">&nbsp;&nbsp;
+                            카카오 챗봇(CJ 오쇼핑 알리미)을 통해  실시간 방송 주문 서비스
+                            </p>
+                            <div className="col_innerContents">
+                                    <ul>
+                                        <li>
+                                            <span className="col_li">개발인원</span>개발팀(3인)
+                                        </li>
+                                        <li>
+                                            <span className="col_li">개발기간</span>2020/10 ~ 2021/01
+                                        </li>
+                                        <li>
+                                            <span className="col_li">사용 기술</span>
+                                            php(CI)_5.x / css / html / 자사 챗봇 빌더 사용 
+                                        </li>
+                                        <li>
+                                            <span className="col_li">담당업무</span>
+                                            <br/>- 배송지 목록 캐로셀 개발 및 배송지 추가 페이지<br/> 
+- 결제 주문 새창 페이지 개발<br/>
+- 개발 후 전체적인 오류 사항 유지보수   
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div className="link_box"></div>
+                            {
+                            isCjOpen && (
+                                <Lightbox
+                                    mainSrc={cjImages[cjIndex]}
+                                    nextSrc={cjImages[(cjIndex + 1) % cjImages.length]}
+                                    prevSrc={cjImages[(cjIndex + cjImages.length - 1) % cjImages.length]}
+                                    onCloseRequest={() => this.setState({isCjOpen: false})}
+                                    onMovePrevRequest={() => this.setState({
+                                        cjIndex: (cjIndex + cjImages.length - 1) % cjImages.length
+                                    })
+                                    }
+                                    onMoveNextRequest={() => this.setState({
+                                        cjIndex: (cjIndex + 1) % cjImages.length
+                                    })
+                                  }/>
+                              )
+                        }
+                        </div>
+                    </div>
+                    <div className="portFolio_box">
                         <div className="portFlio_img" onClick={() => this.setState({isMovieOpen: true})}>
                             <img className="web_img" src={movie} alt="영화 박스오피스" />
                             <div className="hover_box"></div>
@@ -114,7 +222,7 @@ class Body extends Component {
                         </div>
                         <div className="portFlio_contents">
                             <p className="title">
-                                <span className="col_title">개인 프로젝트</span>
+                                <span className="col_title">개인 리액트 공부</span>
                                 '영화 일별 박스오피스'
                             </p>
                             <p className="col_contents">&nbsp;&nbsp;
@@ -173,7 +281,7 @@ class Body extends Component {
                         </div>
                         <div className="portFlio_contents">
                             <p className="title">
-                                <span className="col_title">팀 프로젝트 </span>
+                                <span className="col_title">학원 팀 프로젝트</span>
                                 '일하세' (노인 분들을 위한 구직사이트)
                             </p>
                             <p className="col_contents">
@@ -226,130 +334,6 @@ class Body extends Component {
                             )
                         }
                     </div>
-                    <div className="portFolio_box">
-                        <div className="portFlio_img" onClick={() => this.setState({isAndroidOpen: true})}>
-                            <img className="android" src={android} alt="청소의달인"/>
-                            <img className="android" src={android12} alt="청소의달인12"/>
-                            <img className="android" src={android8} alt="청소의달인8"/>
-                            <img className="android" src={android4} alt="청소의달인8"/>
-                            <div className="hover_box"></div>
-                            <i className="fas fa-image"></i>
-                        </div>
-                        <div className="portFlio_contents">
-                            <p className="title">
-                                <span className="col_title">팀 프로젝트</span>
-                                '청소의 달인'<sapn className="text_tilte"> (청소루틴을 만들어 주는 Android APP)</sapn>
-                            </p>
-                            <p className="col_contents">&nbsp;&nbsp; 사용자들이 해야할 청소를 규칙적으로 관리할 수 있도록 하고자 만든 어플.
-                            </p>
-                            <div className="col_innerContents">
-                                    <ul>
-                                        <li>
-                                            <span className="col_li">개발인원</span>4명</li>
-                                        <li>
-                                            <span className="col_li">개발기간</span>2019/12/02 ~ 2019/02/20</li>
-                                        <li>
-                                            <span className="col_li">담당업무</span>
-                                            오늘의 청소 리스트, 경험치 보상 기능 구현 
-                                        </li>
-                                        <li >
-                                            <span className="col_li">사용 기술</span>
-                                              Java  / DBMS : MysqLite
-                                        </li>
-                                    </ul>      
-                            </div>
-                            <div className="link_box">
-                                <ul>
-                                    <li>
-                                        <i className="fab fa-youtube"></i>시연영상 >
-                                        <a href="https://www.youtube.com/watch?v=w2zrfTsT3VY" target="blank">https://www.youtube.com/watch?v=w2zrfTsT3VY</a>
-                                    </li>
-                                    <li>
-                                        <i className="fab fa-github"></i>
-                                        <a href="https://github.com/chaehyeon01/CleaningMaster" target="blank">https://github.com/chaehyeon01/CleaningMaster</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        {
-                            isAndroidOpen && (
-                                <Lightbox
-                                    mainSrc={androidImages[photoAndroidIndex]}
-                                    nextSrc={androidImages[(photoAndroidIndex + 1) % androidImages.length]}
-                                    prevSrc={androidImages[(photoAndroidIndex + androidImages.length - 1) % androidImages.length]}
-                                    onCloseRequest={() => this.setState({isAndroidOpen: false})}
-                                    onMovePrevRequest={() => this.setState({
-                                        photoAndroidIndex: (photoAndroidIndex + androidImages.length - 1) % androidImages.length
-                                    })
-                                    }
-                                    onMoveNextRequest={() => this.setState({
-                                        photoAndroidIndex: (photoAndroidIndex + 1) % androidImages.length
-                                    })
-                                    }/>
-                            )
-                        }
-                    </div>
-                    <div className="portFolio_box">
-                        <div className="portFlio_img" onClick={() => this.setState({isJavaOpen: true})}>
-                            <img className="Nam2Chatch" src={java} alt="Nam2 캐치마인드1"/>
-                            <img className="Nam2Chatch" src={java2} alt="Nam2 캐치마인드2"/>
-                            <div className="hover_box"></div>
-                            <i className="fas fa-image"></i>
-                        </div>
-                        <div className="portFlio_contents">
-                            <p className="title">
-                                <span className="col_title">팀 프로젝트</span>
-                                'Nam2 캐치마인드'<sapn className="text_tilte"> (소켓통신을 이용한 그림퀴즈 게임)</sapn>
-                            </p>
-                            <p className="col_contents">&nbsp;&nbsp; 모바일 게임 캐치마인드를 모방하여 소켓통신과 멀티쓰레드를 이용하여 순수 자바 코드로 만든 게임.
-                            </p>
-                            <div className="col_innerContents">
-                                    <ul>
-                                        <li>
-                                            <span className="col_li">개발인원</span>2명</li>
-                                        <li>
-                                            <span className="col_li">개발기간</span>2019/09/11 ~ 2020/09/24</li>
-                                        <li className="col_liOuterbox">
-                                            <span className="col_li">담당업무</span>
-                                                클라이언트 담당 / 게임 UI 구성 및 구현 / 이미지 입,출력 구현 / 회원가입,회원 정보 수정
-                                        </li>
-                                        <li>
-                                            <span className="col_li">사용 기술</span>
-                                             Java / DBMS: Mysql
-                                        </li>
-                                    </ul>
-                            </div>
-                            <div className="link_box">
-                                <ul>
-                                    <li>
-                                        <i className="fab fa-youtube"></i>시연영상 >
-                                        <a href="https://youtu.be/f5nduntFdAs" target="blank">https://youtu.be/f5nduntFdAs</a>
-                                    </li>
-                                    <li>
-                                        <i className="fab fa-github"></i>
-                                        <a href="https://github.com/chaehyeon01/JAVA_catchMind" target="blank">https://github.com/chaehyeon01/JAVA_catchMind</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        {
-                            isJavaOpen && (
-                                <Lightbox
-                                    mainSrc={javaImages[javaIndex]}
-                                    nextSrc={javaImages[(javaIndex + 1) % javaImages.length]}
-                                    prevSrc={javaImages[(javaIndex + javaImages.length - 1) % javaImages.length]}
-                                    onCloseRequest={() => this.setState({isJavaOpen: false})}
-                                    onMovePrevRequest={() => this.setState({
-                                        javaIndex: (javaIndex + javaImages.length - 1) % javaImages.length
-                                    })
-                                    }
-                                    onMoveNextRequest={() => this.setState({
-                                        javaIndex: (javaIndex + 1) % javaImages.length
-                                    })
-                                    }/>
-                            )
-                        }
-                    </div>
                 </div>
             </article>
             <article className="aboutMe_box">
@@ -369,16 +353,15 @@ class Body extends Component {
                         </div>                
                     </div>
                     <div className="ab_contents">
-                        <h1>"도전하는 것에 두려워 하지 않고 책임을 다하는 개발자"</h1>
+                        <h1>"현재에 만족하지 않고 끊임없이 성장하는 개발자가 되고 싶습니다!"</h1>
                         <p> &nbsp;&nbsp;2016년, 웹 디자인 교육을 들으면서 처음으로 웹 코딩을 접했습니다. 그 때 
                             구상 한 디자인을 가지고 웹 사이트를 만드는 것에 매력을 느꼈고 
                             웹 개발자라는 직업에 꿈을 품게 되었습니다. 비록 첫 직장을 편집디자이너로 시작했지만, 웹 개발자의 꿈에
                             미련이 남아 더 늦기 전에 도전하게 되었습니다. <br /><br />
                             비전공자 이기 때문에 여러 언어들을 배우고 싶어 9개월이라는 긴 과정의 '안드로이드 웹·앱 개발자' 교육을 이수 했습니다.
-                            돌고 돌아 온 만큼 아직 배우지 못한 언어들에 호기심이 많습니다. 최근 리액트나 노드JS과 같은 프레임워크에 호기심이 생겨
+                            돌고 돌아 온 만큼 아직 배우지 못한 언어들에 호기심이 많습니다. 최근 리액트나 Vue와 같은 프레임워크에 호기심이 생겨
                             개인 적으로 공부하고 있습니다. 
-                            저는 어떤 것에 도전하는 것에 두려워 하지않고 맡은 업무 책임을 다하는 개발자로 목표를 삼아 끊임 없이 발전하는 개발자로 
-                            남고 싶습니다.          
+                            저는 지금 현재에 만족하지 않고  끊임 없이 발전하는 개발자로 성장하고 싶습니다.          
                         </p>
                     </div>
                     <div className="my_skill">
@@ -396,6 +379,7 @@ class Body extends Component {
                                 <li className="lang_java"></li>
                                 <li className="lang_js"></li>
                                 <li className="lang_php"></li>
+                                <li className="lang_android"></li>
                             </ul>
                             <h3>DBMS</h3>
                             <ul className="dbms">
